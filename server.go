@@ -1778,7 +1778,7 @@ func nextConnID() uint64 {
 // reads by default.
 //
 // See Server.MaxRequestBodySize for details.
-const DefaultMaxRequestBodySize = 4 * 1024 * 1024
+const DefaultMaxRequestBodySize = 52 * 1024 * 1024
 
 func (s *Server) serveConn(c net.Conn) error {
 	defer atomic.AddInt32(&s.open, -1)
